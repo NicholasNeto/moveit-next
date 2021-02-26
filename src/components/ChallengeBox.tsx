@@ -5,7 +5,7 @@ import styles from '../styles/components/ChallengeBox.module.css';
 
 export function ChallengeBox() {
 
-    const { activeChallenge } = useContext(ChallengesContext);
+    const { activeChallenge, resetChallenge } = useContext(ChallengesContext);
     
     return (
 
@@ -24,6 +24,7 @@ export function ChallengeBox() {
                         <button
                             type="button"
                             className={styles.challengeFailedButton}
+                            onClick={resetChallenge}
                         >
                             Falhei
                         </button>
@@ -37,7 +38,7 @@ export function ChallengeBox() {
                 </div>
             ) : (
                     <div className={styles.challengeBoxNotActive}>
-                        <strong>Fonalize um ciclo para receber um desafio</strong>
+                        <strong>Finalize um ciclo para receber um desafio</strong>
                         <p>
                             <img src="icons/level-up.svg" alt="level Up" />
                     Avance de level completando desafios.
