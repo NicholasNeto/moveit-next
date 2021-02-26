@@ -8,7 +8,7 @@ export function Countdown() {
 
     const { startNewChallenges} = useContext(ChallengesContext)
 
-    const [time, setTime] = useState(0.2 * 60)
+    const [time, setTime] = useState(0.1 * 60)
     const [isActive, setIsActive] = useState(false)
 
     const minutes = Math.floor(time / 60);
@@ -27,7 +27,7 @@ export function Countdown() {
     function resetCountdown() {
         clearTimeout(countdownTimeout)
         setIsActive(false)
-        setTime(0.2 * 60)
+        setTime(0.1 * 60)
     }
 
     useEffect(() => {
