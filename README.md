@@ -1,4 +1,4 @@
-# Nome do Projeto 
+
 <h1 align="center">Move Yourself</h1>
 
 ## Descrição do Projeto
@@ -17,12 +17,12 @@
 </p>
 
 
-### Gif & Video 
+## Gif & Video 
 <div display=flex align="center">
   <img alt="Version" src="" />
 </div>
 
-#### Conteúdo
+## Conteúdo
 <section id='content' >
   <p align="center">
       <a href="#projectStatus">Sattus da Aplicação</a>
