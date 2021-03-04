@@ -1,0 +1,19 @@
+.loginContainer {
+    
+    display: inline-grid;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    background: var(--blue);
+    color: #FFFFFF;
+}
+
+.loginContainer input {
+    height: 50px;
+    width: 80px;
+}
+
+.loginContainer button {
+    height: 50px;
+    width: 80px;
+}
