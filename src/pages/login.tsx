@@ -7,7 +7,7 @@ export function Login() {
         <div className={styles.loginContainer}>
             <section>
                 <div>
-                    <img src="icons/backgraund.svg" alt="logo" />
+                    <img src="background-login-page.svg" alt="background login page" />
                 </div>
                 <div>
                     <img src="logo-full-white.svg" alt="logo" />
@@ -19,7 +19,7 @@ export function Login() {
                     <div className={styles.loginInputData}>
                         <input type="text" placeholder="Digite seu username" />
                         <button>
-                            <img src="icons/teste.svg" alt="logo" />
+                            <img src="icons/arrow-right.svg" alt="logo" />
                         </button>
                     </div>
                 </div>
