@@ -30,7 +30,8 @@ export default function Home(props: HomeProps) {
       challengesCompleted={props.challengesCompleted}
     >
       <div className={styles.container}>
-        <Head>
+        
+         <Head>
           <title>Inicio | Moveit</title>
         </Head>
         <ExperienceBar />

@@ -50,3 +50,27 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 Além disto, é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 </section>
+
+## Desafios
+
+
+
+
+Documentação Readme 
+ instalar dependencia
+ ter video 
+ explica logistica 
+
+
+
+ * Melhorar uma responsavidade 
+
+ * PWA - Desenvolver de
+
+* Mudar cores criar tema dark 
+
+* Logar com o github dela oauth (next.js no canal da roocket)
+
+* Criar um hanck de quem esta ganhando 
+
+* COMPARTILHAR NAS redes sociais 
