@@ -12,7 +12,6 @@ import styles from '../styles/pages/Home.module.css'
 import { ChallengeBox } from "../components/ChallengeBox";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
-import { Login } from "./login";
 
 interface HomeProps {
   level: number,
@@ -30,7 +29,6 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      {/* <Login /> */}
       <div className={styles.container}>
         
          <Head>
