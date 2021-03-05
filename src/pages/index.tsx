@@ -30,9 +30,10 @@ export default function Home(props: HomeProps) {
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
+      {/* <Login /> */}
       <div className={styles.container}>
-        <Login />
-        {/* <Head>
+        
+         <Head>
           <title>Inicio | Moveit</title>
         </Head>
         <ExperienceBar />
@@ -48,7 +49,7 @@ export default function Home(props: HomeProps) {
               <ChallengeBox />
             </div>
           </section>
-        </CountdownProvider> */}
+        </CountdownProvider>
       </div>
     </ChallengesProvider>
   )
