@@ -35,13 +35,12 @@
 
 .loginInputData {
     display: flex;
-    align-items: center;
-
     margin-top: 3rem;
 }
 
 
 .loginInputData input {
+    text-indent: 2rem;
     width: 20rem;
     height: 3.2rem;
     background: var(--blue);
@@ -49,16 +48,23 @@
     background: linear-gradient(90deg, rgba(73,83,184,1) 32%, rgba(107,117,217,0.4234068627450981) 74%, rgba(158,181,246,0.04245448179271705) 100%);
 } 
 
+.loginInputData input:focus {
+    outline: none;
+}
+
 .loginInputData input::placeholder {
     color: var(--white);
-    text-align: left;
-    padding-left: 2rem;
 } 
 
 .loginInputData button {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 5px;
+    border: 0;
+}
+
+.loginInputData button:focus {
+    outline: none;
 }
 
 .loginInputData img  {
