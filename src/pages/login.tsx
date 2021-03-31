@@ -1,4 +1,5 @@
 import React from "react";
+import { SignInButton } from "../components/SignInButton/SignInButton";
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {
@@ -16,12 +17,9 @@ export default function Login() {
                         <img src="icons/github.svg" alt="logo" />
                         <p>Faça login com seu Github para começar</p>
                     </div>
-                    <div className={styles.loginInputData}>
-                        <input type="text" placeholder="Digite seu username" />
-                        <button>
-                            <img src="icons/arrow-right.svg" alt="logo" />
-                        </button>
-                    </div>
+
+                    <SignInButton />
+
                 </div>
             </section>
         </div>
