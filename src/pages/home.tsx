@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import { GetServerSideProps } from 'next'
 import { CompletedChallenges } from "../components/CompletedChallenges/CompletedChallenges";
 import { Countdown } from "../components/Countdown/Countdown";
@@ -13,19 +13,27 @@ import { ChallengeBox } from "../components/ChallengeBox/ChallengeBox";
 
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
-import { LoginProvider } from "../contexts/LoginContext";
+import { LoginContext, LoginProvider } from "../contexts/LoginContext";
+
+
+interface userType {
+  "login": "NicholasNeto",
+  "avatar_url": string,
+  "type": "User",
+  "name": null,
+  "created_at": "2016-06-02T17:59:23Z",
+  "updated_at": "2021-03-31T01:13:51Z"
+}
 
 interface HomeProps {
   level: number,
   currentExperience: number,
   challengesCompleted: number,
-  user: {}
+  user: userType
 }
-
 
 export default function Home(props: HomeProps) {
 
-  console.log(props);
   return (
     <ChallengesProvider
       level={props.level}
@@ -67,7 +75,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
-      user: JSON.parse(user)
+       user: JSON.parse(user)
     }
   }
 }

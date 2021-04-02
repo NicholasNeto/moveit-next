@@ -17,8 +17,8 @@ interface LoginContextData {
 }
 
 interface LoginProviderProps {
-    children: ReactNode
-    user: {}
+    children: ReactNode;
+    user?: userType;
 }
 
 export const LoginContext = createContext({} as LoginContextData)
@@ -33,9 +33,6 @@ export function LoginProvider({ children, ...rest }: LoginProviderProps) {
 
     function handleChangeUser(data) {
         setUser(data)
-        debugger
-        console.log('data', data)
-
     }
 
     return (
