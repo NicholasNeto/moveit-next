@@ -1,68 +1,28 @@
-
 import React from "react";
-import { GetServerSideProps } from 'next'
-import { CompletedChallenges } from "../components/CompletedChallenges/CompletedChallenges";
-import { Countdown } from "../components/Countdown/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar/ExperienceBar";
-import { Profile } from "../components/Profile/Profile";
+import { SignInButton } from "../components/SignInButton/SignInButton";
+import { LoginProvider } from "../contexts/LoginContext";
+import styles from '../styles/pages/Login.module.css';
 
-import Head from 'next/head'
+export default function Login() {
 
-import styles from '../styles/pages/Home.module.css'
-import { ChallengeBox } from "../components/ChallengeBox/ChallengeBox";
-import { CountdownProvider } from "../contexts/CountdownContext";
-import { ChallengesProvider } from "../contexts/ChallengesContext";
-
-interface HomeProps {
-  level: number,
-  currentExperience: number,
-  challengesCompleted: number,
-}
-
-
-export default function Home(props: HomeProps) {
-
-  console.log(props);
-  return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
-    >
-      <div className={styles.container}>
-        
-         <Head>
-          <title>Inicio | Moveit</title>
-        </Head>
-        <ExperienceBar />
-
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
+    return (
+        <LoginProvider>
+            <div className={styles.loginContainer}>
+                <section>
+                    <div>
+                        <img src="background-login-page.svg" alt="background login page" />
+                    </div>
+                    <div>
+                        <img src="logo-full-white.svg" alt="logo" />
+                        <h1>Bem vindo</h1>
+                        <div className={styles.loginGithub}>
+                            <img src="icons/github.svg" alt="logo" />
+                            <p>Faça login com seu Github para começar</p>
+                        </div>
+                        <SignInButton />
+                    </div>
+                </section>
             </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
-  )
-}
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-
-  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
-
-  console.log( '---------> ', { level, currentExperience, challengesCompleted })
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengesCompleted: Number(challengesCompleted),
-    }
-  }
+        </LoginProvider>
+    )
 }
