@@ -1,18 +1,20 @@
-import { useState } from "react";
-import Login from "../../pages/api/user/[userName]";
+import { useContext, useState } from "react";
+import { LoginContext } from "../../contexts/LoginContext";
 import styles from './SignInButton.module.css'
+import { useRouter } from 'next/router'
 
 
 export function SignInButton() {
-    const [user, setUser] = useState()
-
-
+    const [user, setUser] = useState('')
+    const router = useRouter()
+    const { handleChangeUser } = useContext(LoginContext)
 
     function handleSubmit(event) {
         event.preventDefault();
         fetch(`https://api.github.com/users/${user}`)
-        .then(reposnse => reposnse.json())
-        .then(data => setUser(data))
+            .then(reposnse => reposnse.json())
+            .then(data => handleChangeUser(data))
+            .then(() => router.push('/home'))
     }
 
     function handleChange(event) {
