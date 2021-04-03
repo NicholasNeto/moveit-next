@@ -1,35 +1,21 @@
 
-import React, { useContext } from "react";
+import React from "react";
 import { GetServerSideProps } from 'next'
+import Head from 'next/head'
+
 import { CompletedChallenges } from "../components/CompletedChallenges/CompletedChallenges";
 import { Countdown } from "../components/Countdown/Countdown";
 import { ExperienceBar } from "../components/ExperienceBar/ExperienceBar";
 import { Profile } from "../components/Profile/Profile";
-
-import Head from 'next/head'
-
-import styles from '../styles/pages/Home.module.css'
 import { ChallengeBox } from "../components/ChallengeBox/ChallengeBox";
-
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
-import { LoginContext, LoginProvider } from "../contexts/LoginContext";
 
-
-interface userType {
-  "login": "NicholasNeto",
-  "avatar_url": string,
-  "type": "User",
-  "name": null,
-  "created_at": "2016-06-02T17:59:23Z",
-  "updated_at": "2021-03-31T01:13:51Z"
-}
-
+import styles from '../styles/pages/Home.module.css'
 interface HomeProps {
   level: number,
   currentExperience: number,
   challengesCompleted: number,
-  user: userType
 }
 
 export default function Home(props: HomeProps) {
@@ -50,9 +36,7 @@ export default function Home(props: HomeProps) {
         <CountdownProvider>
           <section>
             <div>
-              <LoginProvider user={props.user}>
-                <Profile />
-              </LoginProvider>
+              <Profile />
               <CompletedChallenges />
               <Countdown />
             </div>
@@ -68,14 +52,13 @@ export default function Home(props: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
-  const { level, currentExperience, challengesCompleted, user } = ctx.req.cookies;
+  const { level, currentExperience, challengesCompleted } = ctx.req.cookies;
 
   return {
     props: {
       level: Number(level),
       currentExperience: Number(currentExperience),
       challengesCompleted: Number(challengesCompleted),
-       user: JSON.parse(user)
     }
   }
 }
