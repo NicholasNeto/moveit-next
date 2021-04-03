@@ -1,0 +1,31 @@
+.menuContainer {
+    position: absolute;
+    width: 112px;
+    height: 820px;
+    left: 0px;
+    top: 0px;
+}
+
+.menuContainer img {
+    width: 32px;
+    height: 32px;
+
+    left: 30.71%;
+    right: 30.71%;
+}
+
+.menuContainer img:first-child {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    width: 48px;
+    height: 42px;
+}
+
+
+
+
+.menuContainer img:nth-child(2)  {
+    position: absolute;
+    top: 350px;
+}
+
