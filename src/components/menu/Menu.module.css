@@ -1,30 +1,29 @@
 .menuContainer {
     position: absolute;
     width: 112px;
-    height: 820px;
+    height: 920px;
     left: 0px;
     top: 0px;
+
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 9%, rgba(255,255,255,1) 16%, rgba(11,9,9,0.18531162464985995) 94%);
 }
 
 .menuContainer img {
-    width: 32px;
-    height: 32px;
-
     left: 30.71%;
     right: 30.71%;
 }
 
-.menuContainer img:first-child {
+.menuContainer .logo {
     margin-top: 1rem;
     margin-left: 2rem;
     width: 48px;
     height: 42px;
 }
 
-
-
-
-.menuContainer img:nth-child(2)  {
+.menuContainer .home > img {
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: 350px;
 }
