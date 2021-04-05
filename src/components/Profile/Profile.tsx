@@ -8,13 +8,21 @@ export function Profile() {
     const { level } = useContext(ChallengesContext)
     const [session] = useSession()
 
-    const  user  = session && session.user ?  session.user: {}
-    
-    return (
+    return session ? (
         <div className={styles.profileContainer}>
-            <img src={user.image} alt={user.name} />
+            <img src={session.user.image} alt='user image' />
             <div>
-                <strong>{user.name}</strong>
+                <strong>{session.user.name}</strong>
+                <p>
+                    <img src="icons/level.svg" alt="" />
+                Level {level}</p>
+            </div>
+        </div>
+    ) : (
+        <div className={styles.profileContainer}>
+            <img src="icons/user.svg" alt='user image' />
+            <div>
+                <strong>Nome Usuario</strong>
                 <p>
                     <img src="icons/level.svg" alt="" />
                     Level {level}</p>
