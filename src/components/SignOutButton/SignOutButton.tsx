@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-import { useRouter } from 'next/router'
 import { signOut } from 'next-auth/client'
-
 import styles from './SignOutButton.module.css'
 
 export function SignOutButton() {

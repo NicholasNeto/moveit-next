@@ -1,17 +1,13 @@
-import { useContext, useState } from "react";
-import { LoginContext } from "../../contexts/LoginContext";
-import styles from './SignInButton.module.css'
-import { useRouter } from 'next/router'
+import { useState } from "react";
 import { signIn } from 'next-auth/client'
-
+import styles from './SignInButton.module.css'
 
 export function SignInButton() {
     const [user, setUser] = useState('')
-    const router = useRouter()
+    
     
     function handleSubmit(event) {
         event.preventDefault();
-       // router.push('/home')
     }
 
     function handleChange(event) {
