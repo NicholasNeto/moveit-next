@@ -19,9 +19,7 @@ export default NextAuth({
   callbacks: {
 
     async signIn(user, account, profile) {
-      const router = useRouter()
-      router.push('/home')
       return true
-    },
+    }
   }
 })
