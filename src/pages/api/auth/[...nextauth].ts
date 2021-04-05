@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
+import { useRouter } from 'next/router'
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -18,7 +19,8 @@ export default NextAuth({
   callbacks: {
 
     async signIn(user, account, profile) {
-      console.log(user)
+      const router = useRouter()
+      router.push('/home')
       return true
     },
   }
