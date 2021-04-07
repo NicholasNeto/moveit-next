@@ -1,8 +1,17 @@
 import React from "react";
 import { SignInButton } from "../components/SignInButton/SignInButton";
+import { signIn, useSession } from 'next-auth/client'
 import styles from '../styles/pages/Login.module.css';
+import { useRouter } from 'next/router'
 
 export default function Login() {
+
+    const router = useRouter()
+    const [ session ] = useSession()
+
+    if( session ){
+        router.push('/home')
+    }
 
     return (
         <div className={styles.loginContainer}>
