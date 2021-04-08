@@ -1,6 +1,6 @@
 import React from "react";
 import { SignInButton } from "../components/SignInButton/SignInButton";
-import { signIn, useSession } from 'next-auth/client'
+import { useSession } from 'next-auth/client'
 import styles from '../styles/pages/Login.module.css';
 import { useRouter } from 'next/router'
 

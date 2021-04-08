@@ -53,9 +53,6 @@ Além disto, é bom ter um editor para trabalhar com o código como [VSCode](htt
 
 ## Desafios
 
-
-
-
 Documentação Readme 
  instalar dependencia
  ter video 
