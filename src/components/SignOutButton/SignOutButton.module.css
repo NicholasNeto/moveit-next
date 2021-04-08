@@ -2,12 +2,12 @@
 
 }
 
-.signOutContainer img {
+.signOutContainer svg {
     position: absolute;
    
     top: 92.93%;
     bottom: 7.07%;  
     
-    /* left: 30.71%;
-    right: 30.71%; */
+    left: 30.71%;
+    right: 30.71%;
 }
