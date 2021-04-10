@@ -1,3 +1,21 @@
+.toggleSwitchContainer{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 85%;
+    bottom: 25%;
+    left: 10%;
+}
+
+.toggleSwitchContainer svg {
+    left: 100%;
+}
+
+.toggleSwitchContainer .lightBulb {
+    left: 100%;
+    margin-bottom: 1rem
+}
+
 .react_switch_checkbox {
     height: 0;
     width: 0;
