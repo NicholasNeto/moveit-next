@@ -13,7 +13,7 @@ export function ToggleSwitch() {
     }
 
     return (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className={styles.toggleSwitchContainer}>
             <div>
                 <input
                     checked={isLight}
@@ -29,7 +29,7 @@ export function ToggleSwitch() {
                     <span className={styles.react_switch_button} />
                 </label>
             </div>
-            <div>
+            <div className={styles.lightBulb} >
                 {
                     isLight ? <FaLightbulb /> : < FaRegLightbulb />
                 }
