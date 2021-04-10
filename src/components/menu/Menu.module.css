@@ -9,22 +9,31 @@
     background: linear-gradient(180deg, rgba(255,255,255,1) 9%, rgba(255,255,255,1) 16%, rgba(11,9,9,0.18531162464985995) 94%);
 }
 
-.menuContainer img {
-    left: 30.71%;
-    right: 30.71%;
-}
 
 .menuContainer .logo {
     margin-top: 1rem;
     margin-left: 2rem;
-    width: 48px;
-    height: 42px;
 }
 
-.menuContainer .home > img {
+
+
+.menuContainer img,
+.menuContainer svg {
     width: 32px;
     height: 32px;
     position: absolute;
+
+    left: 30.71%;
+    right: 30.71%;
+}
+
+
+
+.menuContainer .home > img {
     top: 350px;
+}
+
+.menuContainer .plus > svg {
+    top: 400px;
 }
 
