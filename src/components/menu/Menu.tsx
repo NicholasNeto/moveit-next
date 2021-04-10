@@ -1,7 +1,7 @@
 
 import { SignOutButton } from '../SignOutButton/SignOutButton';
-import { FaLightbulb, FaRegLightbulb } from 'react-icons/fa';
 import styles from './Menu.module.css';
+import { ToggleSwitch } from '../ToggleSwitch/ToggleSwitch';
 
 
 export function Menu() {
@@ -14,10 +14,7 @@ export function Menu() {
                 <img src="/icons/house.svg" alt="House" />
             </div>
             <div>
-                <FaLightbulb />
-            </div>
-            <div>
-            < FaRegLightbulb />
+                <ToggleSwitch />
             </div>
             <SignOutButton />
         </div>
