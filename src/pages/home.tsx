@@ -8,10 +8,13 @@ import { Countdown } from "../components/Countdown/Countdown";
 import { ExperienceBar } from "../components/ExperienceBar/ExperienceBar";
 import { Profile } from "../components/Profile/Profile";
 import { ChallengeBox } from "../components/ChallengeBox/ChallengeBox";
+import { Menu } from "../components/menu/Menu";
+import { PlusChallenges } from "../components/PlusChallenges/PlusChallenges";
 import { CountdownProvider } from "../contexts/CountdownContext";
 import { ChallengesProvider } from "../contexts/ChallengesContext";
-import { Menu } from "../components/menu/Menu";
+import { PlusChallegeProvider } from "../contexts/PlusChallegeContext";
 import styles from '../styles/pages/Home.module.css'
+
 interface HomeProps {
   level: number,
   currentExperience: number,
@@ -19,15 +22,17 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
-
   return (
     <ChallengesProvider
       level={props.level}
       currentExperience={props.currentExperience}
       challengesCompleted={props.challengesCompleted}
     >
-      
-      <Menu />
+
+      <PlusChallegeProvider>
+        <Menu />
+        <PlusChallenges />
+      </PlusChallegeProvider>
       <div className={styles.container}>
         <Head>
           <title>Inicio | Moveit</title>
