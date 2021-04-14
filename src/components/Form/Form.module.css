@@ -1,0 +1,28 @@
+.formContainer {
+    
+}
+
+
+.formContainer div {
+    padding: 1rem;
+}
+
+.formContainer select {
+    width: 100%;
+    height: 30px;
+}
+
+.formContainer textarea {
+    width: 100%;
+    height: 40px;
+}
+
+.formContainer input {
+    width: 100%;
+    height: 30px;
+}
+
+.formContainer button {
+    width: 100%;
+    background: var(--green);
+}
