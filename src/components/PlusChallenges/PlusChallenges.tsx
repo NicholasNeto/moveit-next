@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { PlusChallegeContext } from '../../contexts/PlusChallegeContext'
+import { Form } from '../Form/Form'
 import styles from './PlusChallenges.module.css'
 
 export function PlusChallenges() {
@@ -17,9 +18,9 @@ export function PlusChallenges() {
                     <h4 className={styles.plusChallengesTitle}>Modal Title</h4>
                 </div>
                 <div className={styles.plusChallengesBody}>
-                    This is modal content
+                    <Form />
                 </div>
-                <div className={styles.plusChallengesFooter}>
+                {/* <div className={styles.plusChallengesFooter}>
                     <button
                         type="button"
                         onClick={
@@ -35,7 +36,7 @@ export function PlusChallenges() {
                     >
                         Adicionar
                     </button>
-                </div>
+                </div> */}
             </div>
         </div>
     )
