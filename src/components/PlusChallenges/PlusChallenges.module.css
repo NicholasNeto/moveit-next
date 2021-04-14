@@ -8,11 +8,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 5px;
 }
 
 .plusChallengesContent {
     width: 500px;
-    background-color: #fff;
+    background: var(--background)
 }
 
 .plusChallengesHeader .plusChallengesHeader {
@@ -21,10 +22,61 @@
 
 .plusChallengesTitle{
    margin: 0;
+   padding: 1rem;
+   color: var(--title)
 }
 
 .plusChallengesBody{
     padding: 1rem;
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee; 
+}
+
+
+.plusChallengesFooter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 1rem;
+}
+
+.plusChallengesFooter div {
+    
+
+    
+}
+
+
+.formContainer div label {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.formContainer div {
+    padding: 1rem;
+}
+
+.formContainer select {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.formContainer textarea {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.formContainer input {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.formContainer button {
+    width: 100%;
+    background: var(--green);
 }
