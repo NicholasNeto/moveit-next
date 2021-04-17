@@ -70,7 +70,7 @@ export function ChallengesProvider(
 
     function startNewChallenges() {
         const randomChallengeIndex = Math.floor(Math.random() * challenges.length)
-        const challenge = challenges[randomChallengeIndex]
+        const challenge = challenges[randomChallengeIndex] // pegar do banco de dados
 
         setActiveChallenge(challenge)
 

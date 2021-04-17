@@ -1,21 +1,27 @@
+import {  toast } from 'react-toastify';
+import { signIn, useSession } from 'next-auth/client'
 import { useContext, useState } from 'react'
 import { PlusChallegeContext } from '../../contexts/PlusChallegeContext'
+import { api } from '../../services/api'
 import { Form } from '../Form/Form'
 import styles from './PlusChallenges.module.css'
 
 export function PlusChallenges() {
 
-
-
+    const { show, handleAddChallege } = useContext(PlusChallegeContext)
+    const [ session ] = useSession()
     const [type, setType] = useState(undefined)
     const [description, setDescription] = useState('')
     const [amount, setAmount] = useState('')
 
 
     function handleInputChange(event) {
+        event.preventDefault();
         const target = event.target;
         const name = target.name;
         const value = target.value
+
+        
 
         switch (name) {
             case 'amount':
@@ -32,13 +38,30 @@ export function PlusChallenges() {
         }
     }
 
-    function handleSubmit(event) {
-        alert('Um nome foi enviado: ');
-        event.preventDefault();
+   async function handleSubmit(event) {
+
+        if(!session){
+            signIn('github')
+            return;
+        } 
+        handleAddChallege(false)
+        try {
+            // const response = await api.post('challenges/challenge', { type, description, amount })
+            
+            setTimeout(() => {
+                toast("Adcionado com sucesso!")
+                console.log('passei')
+            },3000)
+            
+            
+            
+        } catch (error) {
+            toast.error('Error', error)
+        }
     }
 
 
-    const { show, handleAddChallege } = useContext(PlusChallegeContext)
+    
 
     if (!show) {
         return null
