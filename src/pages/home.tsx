@@ -2,6 +2,7 @@
 import React from "react";
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
+import { ToastContainer } from 'react-toastify';
 
 import { CompletedChallenges } from "../components/CompletedChallenges/CompletedChallenges";
 import { Countdown } from "../components/Countdown/Countdown";
@@ -52,6 +53,7 @@ export default function Home(props: HomeProps) {
           </section>
         </CountdownProvider>
       </div>
+
     </ChallengesProvider>
   )
 }
