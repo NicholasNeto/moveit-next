@@ -15,7 +15,8 @@
     "next-auth": "^3.13.3",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "react-toastify": "^7.0.3"
   },
   "devDependencies": {
     "@types/js-cookie": "^2.2.6",
