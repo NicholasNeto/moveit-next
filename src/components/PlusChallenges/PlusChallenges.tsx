@@ -1,4 +1,4 @@
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import { signIn, useSession } from 'next-auth/client'
 import { useContext, useState } from 'react'
 import { PlusChallegeContext } from '../../contexts/PlusChallegeContext'
@@ -9,7 +9,7 @@ import styles from './PlusChallenges.module.css'
 export function PlusChallenges() {
 
     const { show, handleAddChallege } = useContext(PlusChallegeContext)
-    const [ session ] = useSession()
+    const [session] = useSession()
     const [type, setType] = useState(undefined)
     const [description, setDescription] = useState('')
     const [amount, setAmount] = useState('')
@@ -21,7 +21,7 @@ export function PlusChallenges() {
         const name = target.name;
         const value = target.value
 
-        
+
 
         switch (name) {
             case 'amount':
@@ -38,30 +38,30 @@ export function PlusChallenges() {
         }
     }
 
-   async function handleSubmit(event) {
+    async function handleSubmit(event) {
 
-        if(!session){
+        if (!session) {
             signIn('github')
             return;
-        } 
+        }
         handleAddChallege(false)
         try {
             // const response = await api.post('challenges/challenge', { type, description, amount })
-            
+
             setTimeout(() => {
                 toast("Adcionado com sucesso!")
                 console.log('passei')
-            },3000)
-            
-            
-            
+            }, 3000)
+
+
+
         } catch (error) {
             toast.error('Error', error)
         }
     }
 
 
-    
+
 
     if (!show) {
         return null
@@ -120,22 +120,22 @@ export function PlusChallenges() {
 
                 </div>
                 <div className={styles.plusChallengesFooter}>
-                    <div>
-                        <button
-                            type="button"
-                            onClick={
-                                () => handleAddChallege(false)
-                            }
-                        >
-                            Cancelar
+
+                    <button
+                        type="button"
+                        onClick={
+                            () => handleAddChallege(false)
+                        }
+                    >
+                        Cancelar
                     </button>
-                        <button
-                            type="submit"
-                            onClick={handleSubmit}
-                        >
-                            Adicionar
+                    <button
+                        type="submit"
+                        onClick={handleSubmit}
+                    >
+                        Adicionar
                     </button>
-                    </div>
+
                 </div>
             </div>
         </div>

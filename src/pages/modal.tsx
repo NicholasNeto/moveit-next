@@ -8,7 +8,7 @@ export default function Modal() {
     return (
         <div>
             <button>show modal</button>
-            <PlusChallenges show={false} />
+            <PlusChallenges />
         </div>
     )
 }
